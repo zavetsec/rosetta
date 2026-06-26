@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-label="ZavetSec Rosetta — Detection Codex · Attack to Detection">
+  <defs>
+    <!-- red -> purple -> blue : тезис purple = red + blue -->
+    <linearGradient id="spectrum" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0"    stop-color="#ff4d4d"/>
+      <stop offset="0.5"  stop-color="#b15cff"/>
+      <stop offset="1"    stop-color="#3da8ff"/>
+    </linearGradient>
+    <linearGradient id="titleFill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0"    stop-color="#ff6a6a"/>
+      <stop offset="0.5"  stop-color="#c074ff"/>
+      <stop offset="1"    stop-color="#5cb6ff"/>
+    </linearGradient>
+    <radialGradient id="greenGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#00ff88" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#00ff88" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="80"/>
+    </filter>
+    <filter id="softblur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <pattern id="scan" patternUnits="userSpaceOnUse" width="3" height="3">
+      <rect width="3" height="1" fill="#ffffff" opacity="0.022"/>
+    </pattern>
+  </defs>
+
+  <!-- base -->
+  <rect width="1200" height="380" fill="#0a0d10"/>
+
+  <!-- red -> purple -> blue wash (blurred color fields) -->
+  <g filter="url(#blur)" opacity="0.30">
+    <ellipse cx="230"  cy="150" rx="260" ry="200" fill="#ff3b3b"/>
+    <ellipse cx="600"  cy="250" rx="300" ry="220" fill="#9b3bff"/>
+    <ellipse cx="990"  cy="150" rx="280" ry="200" fill="#2f8bff"/>
+  </g>
+  <ellipse cx="600" cy="190" rx="620" ry="300" fill="url(#greenGlow)"/>
+
+  <!-- scanlines -->
+  <rect width="1200" height="380" fill="url(#scan)"/>
+
+  <!-- frame -->
+  <rect x="0.5" y="0.5" width="1199" height="379" fill="none" stroke="#1c2430" stroke-width="1"/>
+  <rect x="14"  y="14"  width="1172" height="352" fill="none" stroke="#00ff88" stroke-opacity="0.12" stroke-width="1"/>
+
+  <!-- top tag -->
+  <text x="64" y="70" font-family="'JetBrains Mono','Courier New',monospace" font-size="18" letter-spacing="5"
+        fill="#00ff88" opacity="0.85">// ZAVETSEC</text>
+  <text x="1136" y="70" text-anchor="end" font-family="'JetBrains Mono','Courier New',monospace" font-size="14"
+        letter-spacing="3" fill="#5a6b78">purple = red + blue</text>
+
+  <!-- title -->
+  <text x="60" y="206" font-family="'Rajdhani','Segoe UI',Arial,sans-serif" font-weight="700"
+        font-size="118" letter-spacing="6" fill="url(#titleFill)">ROSETTA</text>
+
+  <!-- spectrum underline -->
+  <rect x="66" y="226" width="612" height="5" fill="url(#spectrum)"/>
+
+  <!-- subtitle -->
+  <text x="68" y="274" font-family="'JetBrains Mono','Courier New',monospace" font-weight="700"
+        font-size="27" letter-spacing="11" fill="#00ff88">DETECTION CODEX</text>
+
+  <!-- caption -->
+  <text x="69" y="312" font-family="'JetBrains Mono','Courier New',monospace" font-size="17" letter-spacing="1"
+        fill="#9fb0bd">Attack &#8596; Detection &#160;&#183;&#160; одна техника — три ракурса</text>
+
+  <!-- bottom tag -->
+  <text x="69" y="350" font-family="'JetBrains Mono','Courier New',monospace" font-size="13.5" letter-spacing="2"
+        fill="#5a6b78">53 techniques · 12 tactics · 4 SIEM dialects · single-file · offline</text>
+
+  <!-- right: three panes -->
+  <g font-family="'JetBrains Mono','Courier New',monospace" font-size="20" text-anchor="end" letter-spacing="2">
+    <line x1="1010" y1="150" x2="1010" y2="262" stroke="#1c2430" stroke-width="2"/>
+    <circle cx="1010" cy="150" r="5" fill="#ff4d4d" filter="url(#softblur)"/>
+    <circle cx="1010" cy="150" r="4" fill="#ff4d4d"/>
+    <text x="1136" y="156" fill="#ff8a8a">◣&#160; Attack</text>
+    <circle cx="1010" cy="206" r="5" fill="#b15cff" filter="url(#softblur)"/>
+    <circle cx="1010" cy="206" r="4" fill="#b15cff"/>
+    <text x="1136" y="212" fill="#c89dff">⬡&#160; Telemetry</text>
+    <circle cx="1010" cy="262" r="5" fill="#3da8ff" filter="url(#softblur)"/>
+    <circle cx="1010" cy="262" r="4" fill="#3da8ff"/>
+    <text x="1136" y="268" fill="#8fcaff">◥&#160; Detection</text>
+  </g>
+</svg>

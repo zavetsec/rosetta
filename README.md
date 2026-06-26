@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="rosetta-banner.png" alt="ZavetSec Rosetta"/>
+  <img src="rosetta-banner.svg" alt="ZavetSec Rosetta — Detection Codex"/>
 </div>
 
 <div align="center">
